@@ -1,0 +1,69 @@
+<DOCTYPE html>
+<head>
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body{
+			background-image: url('log.jpg');
+			background-image: linear-gradient(rgba(90,90,90,0.5),rgba(90,90,90,0.5)),url(log.jpg);
+		}
+	</style>
+</head>
+<nav>
+    <input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+	  <i class="fas fa-bars"></i>
+	</label>
+	<label class="logo">𝕄𝕌𝕂𝔼𝔼𝕐'𝕤 ℂ𝕃𝕆𝕋ℍ𝕀ℕ𝔾</label>
+	<ul>
+	  <li><a href="Index.html" class="bro">卄口从乇</li>
+	  <li><a href="shop.html">丂卄口尸</a></li>
+	  <li><a href="website.html">乚口厶工𠘨</a></li> 
+	</ul>
+  </nav>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="inner-box" id="card">
+				<div class="card-front">
+					<h2>LOGIN</h2>
+					<form action="/action_page.php" name="myform" onsubmit="return validationfrom()" method="post">
+						<input name="email" type="email" class="input-box" placeholder="Enter Email" required>
+						<input name="password" type="password" class="input-box" placeholder="Password" required>
+						<button type="submit" class="submit-btn" value="confirm">Submit</button>
+						<input type="checkbox"><span>Remember Me</span>
+					</form>
+					<button type="button" class="btn" onclick="openRegister()" >I dont have an account</button>
+					<a href="">Forgot Password</a>
+				</div>
+				<div class="card-back">
+					<h2>Register</h2>
+					<form action="connect.php" method="post">
+						<input type="text" class="input-box" id="FirstName" name="FirstName" placeholder="Your name" required>
+						<input type="email" class="input-box" id="email" name="email" placeholder="Enter Email" required>
+						<input type="password" class="input-box" id="password" name="password" placeholder="Password" required>
+						<button type="submit" class="submit-btn">Submit</button>
+						<input type="checkbox"><span>Remember Me</span>
+					</form>
+					<button type="button" class="btn" onclick="openLogin()">I've an account</button>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script>
+		
+		var card = document.getElementById("card");
+		
+		function openRegister(){
+			card.style.transform= "rotateY(-180deg)";
+		}
+		function openLogin(){
+			card.style.transform= "rotateY(-0deg)";
+		}		
+		</script>
+
+		<script src="script.js"></script>
+
+
+</body>
+</html>
